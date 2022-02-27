@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Cherry
+  - Gem
+  - Trap
+  - BGM
+  - Ladder
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2555265763
+    locked: 0
+  - name: Terrain
+    uniqueID: 2663684135
+    locked: 0
+  - name: Props
+    uniqueID: 134173259
+    locked: 0
+  - name: Decoration
+    uniqueID: 668394137
+    locked: 0
+  - name: Player
+    uniqueID: 4272606839
+    locked: 0
+  - name: Collectibles
+    uniqueID: 2120424315
+    locked: 0
+  - name: Effects
+    uniqueID: 1371986555
+    locked: 0
