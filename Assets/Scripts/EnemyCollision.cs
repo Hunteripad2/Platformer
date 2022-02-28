@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
 {
-    private BoxCollider2D coll;
-    private Animator anim;
-    private WaypointMoving moving;
+    [HideInInspector] private BoxCollider2D coll;
+    [HideInInspector] private Animator anim;
+    [HideInInspector] private WaypointMoving moving;
 
+    [Header("Sound Effects")]
     [SerializeField] private AudioSource enemyDeathSoundEffect;
 
     private void Start()

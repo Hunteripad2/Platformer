@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private BoxCollider2D coll;
-    private Animator anim;
+    [HideInInspector] private Rigidbody2D rb;
+    [HideInInspector] private BoxCollider2D coll;
+    [HideInInspector] private Animator anim;
+    [HideInInspector] private bool isAlive = true;
 
-    private bool isAlive = true;
-
+    [Header("Sound Effects")]
     [SerializeField] private AudioSource deathSoundEffect;
 
     private void Start()

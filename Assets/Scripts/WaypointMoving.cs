@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class WaypointMoving : MonoBehaviour
 {
-    private SpriteRenderer sprite;
+    [HideInInspector] private SpriteRenderer sprite;
+    [HideInInspector] private int currentWaypointIndex;
 
-    [SerializeField] private GameObject[] waypoints;
+    [Header("Movement")]
     [SerializeField] private float speed = 3f;
-
-    private int currentWaypointIndex = 0;
+    [SerializeField] private GameObject[] waypoints;
 
     private void Start()
     {

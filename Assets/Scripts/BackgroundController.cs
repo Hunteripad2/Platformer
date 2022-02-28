@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class BackgroundController : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    [HideInInspector] private Transform player;
 
-    void Update()
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    private void Update()
     {
         transform.position = new Vector2(player.position.x, transform.position.y);
     }

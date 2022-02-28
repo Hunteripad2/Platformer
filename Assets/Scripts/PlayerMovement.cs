@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private SpriteRenderer sprite;
-    private Rigidbody2D rb;
-    private BoxCollider2D coll;
-    private Animator anim;
+    [HideInInspector] private SpriteRenderer sprite;
+    [HideInInspector] private Rigidbody2D rb;
+    [HideInInspector] private BoxCollider2D coll;
+    [HideInInspector] private Animator anim;
+    [HideInInspector] private enum MovementState { idle, running, jumping, falling, climbingIdle, climbing }
+    [HideInInspector] private float dirX = 0f;
+    [HideInInspector] private float dirY = 0f;
+    [HideInInspector] private bool isClimbing = false;
 
-    private enum MovementState { idle, running, jumping, falling, climbingIdle, climbing }
-
-    private float dirX = 0f;
-    private float dirY = 0f;
-    private bool isClimbing = false;
-
+    [Header("Movement")]
     [SerializeField] private float movementSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
     [SerializeField] private LayerMask jumpableGround;
+
+    [Header("Sound Effects")]
+    //[SerializeField] private AudioSource moveSoundEffect;
     [SerializeField] private AudioSource jumpSoundEffect;
 
     private void Start()
@@ -30,17 +32,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
+        dirX = Input.GetAxisRaw("Horizontal") * movementSpeed;
+        dirY = rb.velocity.y;
 
         if (isClimbing)
         {
-            dirY = Input.GetAxisRaw("Vertical");
-            rb.velocity = new Vector2(dirX * movementSpeed, dirY * movementSpeed);
+            dirY = Input.GetAxisRaw("Vertical") * movementSpeed;
         }
-        else
-        {
-            rb.velocity = new Vector2(dirX * movementSpeed, rb.velocity.y);
-        }
+
+        rb.velocity = new Vector2(dirX, dirY);
 
         if (Input.GetButtonDown("Jump") && IsOnGround())
         {
@@ -50,6 +50,18 @@ public class PlayerMovement : MonoBehaviour
 
         UpdateAnimationState();
     }
+
+    //private void FixedUpdate()
+    //{
+    //    if (dirX > 0f && IsOnGround() && moveSoundEffect.isPlaying == false)
+    //    {
+    //        moveSoundEffect.Play();
+    //    }
+    //    else
+    //    {
+    //        moveSoundEffect.Stop();
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D collider)
     {

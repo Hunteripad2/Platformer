@@ -535,7 +535,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1532c7e67c2d60c4c8780da14b7e8fcf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -829,18 +829,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 371838412}
     m_Modifications:
-    - target: {fileID: 2866173477341414094, guid: 9a13a30f7d929f84f810045654824a1c, type: 3}
-      propertyPath: m_Color.b
-      value: 0.50980395
-      objectReference: {fileID: 0}
-    - target: {fileID: 2866173477341414094, guid: 9a13a30f7d929f84f810045654824a1c, type: 3}
-      propertyPath: m_Color.g
-      value: 0.11764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2866173477341414094, guid: 9a13a30f7d929f84f810045654824a1c, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9411765
-      objectReference: {fileID: 0}
     - target: {fileID: 2866173477369666530, guid: 9a13a30f7d929f84f810045654824a1c, type: 3}
       propertyPath: m_Name
       value: Quit Button
@@ -938,18 +926,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 371838412}
     m_Modifications:
-    - target: {fileID: 3912942494575973401, guid: 5c28e459ee1715a4c88510e8c8def85c, type: 3}
-      propertyPath: m_Color.b
-      value: 0.50980395
-      objectReference: {fileID: 0}
-    - target: {fileID: 3912942494575973401, guid: 5c28e459ee1715a4c88510e8c8def85c, type: 3}
-      propertyPath: m_Color.g
-      value: 0.11764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 3912942494575973401, guid: 5c28e459ee1715a4c88510e8c8def85c, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9411765
-      objectReference: {fileID: 0}
     - target: {fileID: 3912942495392150916, guid: 5c28e459ee1715a4c88510e8c8def85c, type: 3}
       propertyPath: m_Name
       value: Start Button

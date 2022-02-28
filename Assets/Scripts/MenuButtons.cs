@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartMenu : MonoBehaviour
+public class MenuButtons : MonoBehaviour
 {
+    [Header("Sound Effects")]
     [SerializeField] private AudioSource ButtonSoundEffect;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
 
     public void StartGame()
     {
@@ -17,5 +23,11 @@ public class StartMenu : MonoBehaviour
     {
         ButtonSoundEffect.Play();
         SceneManager.LoadScene(1);
+    }
+
+    public void QuitGame()
+    {
+        ButtonSoundEffect.Play();
+        Application.Quit();
     }
 }

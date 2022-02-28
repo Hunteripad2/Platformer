@@ -9,6 +9,8 @@ TagManager:
   - Trap
   - BGM
   - Ladder
+  - Gem Score
+  - Cherry Score
   layers:
   - Default
   - TransparentFX

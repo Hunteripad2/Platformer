@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Vector3 oldPosition;
-    //MiddlegroundMovement[] allMiddlegrounds;
-
-    [SerializeField] private Transform player;
+    [HideInInspector] private Transform player;
 
     private void Start()
     {
-        oldPosition = this.transform.position;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
@@ -22,23 +19,5 @@ public class CameraController : MonoBehaviour
             posY = player.position.y;
         }
         transform.position = new Vector3(player.position.x, posY, transform.position.z);
-        //CheckIfMoved();
-    }
-
-    private void CheckIfMoved()
-    {
-        if (oldPosition != this.transform.position)
-        {
-            oldPosition = this.transform.position;
-
-            //if (allMiddlegrounds == null)
-            //{
-            //    allMiddlegrounds = GameObject.FindObjectsOfType<MiddlegroundMovement>();
-            //}
-            //foreach (MiddlegroundMovement middleground in allMiddlegrounds)
-            //{
-            //    middleground.UpdatePosition();
-            //}
-        }
     }
 }

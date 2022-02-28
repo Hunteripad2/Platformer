@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6108440365414347271}
   - component: {fileID: 6108440365414347270}
   m_Layer: 5
-  m_Name: Cherries Score
-  m_TagString: Untagged
+  m_Name: Cherry Score
+  m_TagString: Cherry Score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6108440365494294497}
   m_Layer: 5
   m_Name: Gem Score
-  m_TagString: Untagged
+  m_TagString: Gem Score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 6108440366027175862}
   - component: {fileID: 6108440366027175861}
   - component: {fileID: 6108440366027175860}
+  - component: {fileID: 1670965499}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -336,6 +337,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1670965499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108440366027175867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4ef53aaa18c3449addb76177fab692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6108440366977307454
 GameObject:
   m_ObjectHideFlags: 0
